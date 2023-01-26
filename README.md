@@ -27,7 +27,7 @@ React Hook Form - A library that handles forms in React
 npm i react-hook-form @hookform/resolvers zod
 
 ```
- Design System[https://github.com/diego3g/05-design-system] - Design System that was built into one of the Ignite modules
+ [Design System](https://github.com/diego3g/05-design-system) - Design System that was built into one of the Ignite modules
 
  ``` 
  npm i @ignite-ui/react@latest
