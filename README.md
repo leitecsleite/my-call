@@ -33,6 +33,22 @@ npm i react-hook-form @hookform/resolvers zod
  npm i @ignite-ui/react@latest
 
 ```
+ ESLint  - ESLint to make it easier to maintain code standards.
+ 
+```
+ npm i @rocketseat/eslint-config -D
+ 
+```
+
+```
+{
+  "extends": [
+    "@rocketseat/eslint-config/react",
+    "next/core-web-vitals"
+  ]
+}
+
+``
 
 ## Learn More
 
