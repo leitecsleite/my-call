@@ -19,6 +19,14 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 Call scheduling.
 
+## Libraries
+
+React Hook Form - A library that handles forms in React
+
+``` 
+npm i react-hook-form @hookform/resolvers zod
+
+```
 
 ## Learn More
 
