@@ -50,6 +50,45 @@ npm i react-hook-form @hookform/resolvers zod
 
 ```
 
+## Back-End Prisma 
+ 
+Prisma on Next.js
+
+Prisma command line interface installation command:
+
+```
+npm i prisma -D
+
+```
+
+Command to install the dependency that we will use in our application:
+
+```
+npm i @prisma/client
+
+```
+
+Command to start Prisma:
+
+```
+npx prisma init --datasource-provider SQLite
+
+```
+
+Comando pra rodar a migration:
+
+```
+npx prisma migrate dev
+
+```
+
+Command to run Prisma Studio:
+
+```
+npx prisma studio
+
+```
+
 ## Learn More
 
 To learn more about Next.js, take a look at the following resources:
