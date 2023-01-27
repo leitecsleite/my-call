@@ -67,7 +67,7 @@ npm i @types/cookie -D
 
 ## Back-End Prisma 
  
-Prisma on Next.js
+[Prisma](https://github.com/prisma/prisma) on Next.js
 
 Prisma command line interface installation command:
 
