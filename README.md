@@ -50,6 +50,12 @@ npm i react-hook-form @hookform/resolvers zod
 
 ```
 
+[Axios](https://www.npmjs.com/package/axios) - Promise based HTTP client for the browser and node.js
+
+```
+npm i axios
+
+```
 ## Back-End Prisma 
  
 Prisma on Next.js
