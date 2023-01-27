@@ -56,6 +56,15 @@ npm i react-hook-form @hookform/resolvers zod
 npm i axios
 
 ```
+[Nookies](https://github.com/maticzav/nookies) - Handling cookies in next.js
+
+```
+npm i nookies 
+
+npm i @types/cookie -D
+
+```
+
 ## Back-End Prisma 
  
 Prisma on Next.js
