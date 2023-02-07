@@ -58,10 +58,17 @@ npm i axios
 ```
 [Nookies](https://github.com/maticzav/nookies) - Handling cookies in next.js
 
+
 ```
 npm i nookies 
 
 npm i @types/cookie -D
+
+```
+[NextAuth.js](https://next-auth.js.org/getting-started/example) - NextAuth.js is a complete open-source authentication solution for Next.js applications.
+
+```
+npm install next-auth
 
 ```
 
