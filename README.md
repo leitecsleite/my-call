@@ -1,7 +1,7 @@
 
-![This is an image](/assets/home.png)
+<h1 align="center">MY CALL</h1>
 
-
+![This is an image](./src/assets/Home.png)
 
 ## Getting Started
 
