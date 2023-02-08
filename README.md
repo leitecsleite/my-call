@@ -1,4 +1,7 @@
 
+![This is an image](/assets/home.png)
+
+
 
 ## Getting Started
 
