@@ -14,7 +14,7 @@ CREATE TABLE "accounts" (
     "user_id" TEXT NOT NULL,
     "type" TEXT NOT NULL,
     "provider" TEXT NOT NULL,
-    "provider_accountId" TEXT NOT NULL,
+    "provider_account_id" TEXT NOT NULL,
     "refresh_token" TEXT,
     "access_token" TEXT,
     "expires_at" INTEGER,
@@ -35,7 +35,7 @@ CREATE TABLE "session" (
 );
 
 -- CreateIndex
-CREATE UNIQUE INDEX "accounts_provider_provider_accountId_key" ON "accounts"("provider", "provider_accountId");
+CREATE UNIQUE INDEX "accounts_provider_provider_account_id_key" ON "accounts"("provider", "provider_account_id");
 
 -- CreateIndex
 CREATE UNIQUE INDEX "session_session_token_key" ON "session"("session_token");
