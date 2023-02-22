@@ -10,6 +10,7 @@ import { getWeekDays } from '../../../utils/get-weeks-days'
 import { ArrowRight } from 'phosphor-react'
 import { useFieldArray, useForm, Controller } from 'react-hook-form'
 import { z } from 'zod'
+import { zodResolver } from '@hookform/resolvers/zod'
 
 import { Container, Header } from '../styles'
 import {
@@ -20,9 +21,26 @@ import {
   IntervalsContainer,
 } from './styles'
 
-/* import { api } from '../../lib/axios' */
+const timeIntervalsFormSchema = z.object({
+  intervals: z
+    .array(
+      z.object({
+        weekDay: z.number().min(0).max(6),
+        enabled: z.boolean(),
+        startTime: z.string(),
+        endTime: z.string(),
+      }),
+    )
+    .length(7)
+    .transform((intervals) =>
+      intervals.filter((interval) => interval.enabled === true),
+    )
+    .refine((intervals) => intervals.lenght > 0, {
+      message: 'Você precisa selecionar pelo menos um dia da semana',
+    }),
+})
 
-const timeIntervalsFormSchema = z.object({})
+type TimeIntervalsFormData = z.infer<typeof timeIntervalsFormSchema>
 
 export default function TimeIntervals() {
   const {
@@ -33,6 +51,7 @@ export default function TimeIntervals() {
     formState: { isSubmitting, errors },
   } = useForm({
     defaultValues: {
+      resolver: zodResolver(timeIntervalsFormSchema),
       intervals: [
         { weekDay: 0, enabled: false, startTime: '08:00', endTime: '18:00' },
         { weekDay: 1, enabled: true, startTime: '08:00', endTime: '18:00' },
@@ -54,7 +73,9 @@ export default function TimeIntervals() {
 
   const intervals = watch('intervals')
 
-  async function handleSetTimeIntervals() {}
+  async function handleSetTimeIntervals(data: TimeIntervalsFormData) {
+    console.log(data)
+  }
 
   return (
     <Container>
