@@ -19,6 +19,7 @@ import {
   IntervalInput,
   IntervalItem,
   IntervalsContainer,
+  FormError
 } from './styles'
 
 const timeIntervalsFormSchema = z.object({
@@ -129,6 +130,11 @@ export default function TimeIntervals() {
             )
           })}
         </IntervalsContainer>
+
+        {errors.intervals && (
+          <FormError size="sm">{errors.intervals.message}</FormError>
+        )}
+
         <Button type="submit">
           Próximo passo
           <ArrowRight />
