@@ -19,8 +19,9 @@ import {
   IntervalInput,
   IntervalItem,
   IntervalsContainer,
-  FormError
+  FormError,
 } from './styles'
+import { convertTimeStringToMinutes } from '@/src/utils/conver-time-string-to-minutes'
 
 const timeIntervalsFormSchema = z.object({
   intervals: z
@@ -36,6 +37,17 @@ const timeIntervalsFormSchema = z.object({
     .transform((intervals) => intervals.filter((interval) => interval.enabled))
     .refine((intervals) => intervals.length > 0, {
       message: 'Você precisa selecionar pelo menos um dia da semana',
+    })
+    .transform((intervals) => {
+      return intervals.map((interval) => {
+        return {
+          weekDay: intervals.weekDay,
+          startTimeInMinutes: convertTimeStringToMinutes(interval.startTime),
+          endTimeInMinutes: convertTimeStringToMinutes(
+            interval.endTime,
+          ),
+        }
+      })
     }),
 })
 
